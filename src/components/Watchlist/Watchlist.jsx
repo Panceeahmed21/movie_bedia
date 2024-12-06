@@ -9,13 +9,11 @@ export default function WatchList() {
 
   async function getWatchLisFn() {
     let res = await getWatchList();
-    console.log(res.results);
     setWatchList(res.results);
   }
 
   async function deleteWatchMovieFn(movieID) {
     let res = await deleteWatchMovie(movieID);
-    console.log(res);
 
     if (res.success == true) {
       toast.success("Movie is removed successfully", {
@@ -27,8 +25,6 @@ export default function WatchList() {
         position: "bottom-right",
       });
     }
-
-    console.log(res);
   }
   useEffect(() => {
     getWatchLisFn();
