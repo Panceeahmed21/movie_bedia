@@ -52,10 +52,10 @@ export default function MovieDetails() {
       {movieDetails ? (
         <>
           {" "}
-          <div className="flex flex-wrap">
+          <div className="flex flex-wrap flex:col items-center">
             <div className="w-full md:w-1/2 px-2">
               <img
-                className="w-[80%] rounded-full hover:skew-x-3 hover:skew-y-3  transition-all duration-30"
+                className="w-full md:w-[80%] rounded-full hover:skew-x-3 hover:skew-y-3  transition-all duration-30"
                 src={`https://image.tmdb.org/t/p/w500/${movieDetails?.poster_path}`}
                 alt=""
               />
