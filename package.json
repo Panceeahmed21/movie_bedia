@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Panceeahmed21.github.io/movie_bedia",
+  "homepage": "https://Panceeahmed21.github.io/",
   "scripts": {
     "dev": "vite",
     "predeploy": "npm run build",
