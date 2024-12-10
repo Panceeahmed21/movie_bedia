@@ -32,13 +32,13 @@ export default function WatchList() {
 
   return (
     <>
-      {watchList.length > 0 ? (
+      {watchList.length !== 0 ? (
         watchList.length > 0 ? (
           watchList?.map((watch) => {
             return (
               <div
                 className="relative overflow-x-auto shadow-md sm:rounded-lg"
-                key={watch.id}
+                key={watch?.id}
               >
                 <table className="w-full text-sm text-left rtl:text-right ">
                   <tbody>

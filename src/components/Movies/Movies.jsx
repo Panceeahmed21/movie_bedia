@@ -97,15 +97,15 @@ export default function Movies() {
           return (
             <div
               className="w-full md:w-1/4 px-4 py-4 text-center"
-              key={movie.id}
+              key={movie?.id}
             >
-              <Link to={`/moviesDetails/${movie.id}`}>
+              <Link to={`/moviesDetails/${movie?.id}`}>
                 <img
                   className="rounded-lg hover:skew-x-6 hover:skew-y-6 transition-all duration-300 "
-                  src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+                  src={`https://image.tmdb.org/t/p/w500/${movie?.poster_path}`}
                   alt=""
                 />
-                <h2 className="text-xl mt-3">{movie.title}</h2>
+                <h2 className="text-xl mt-3">{movie?.title}</h2>
               </Link>
 
               <div className="flex justify-between items-center  w-full my-3">

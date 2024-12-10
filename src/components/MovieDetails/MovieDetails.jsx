@@ -61,15 +61,15 @@ export default function MovieDetails() {
               />
             </div>
             <div className="w-full md:w-1/2 px-2">
-              <h2 className="text-2xl font-medium">{movieDetails.title}</h2>
+              <h2 className="text-2xl font-medium">{movieDetails?.title}</h2>
 
-              {movieDetails.genres ? (
+              {movieDetails?.genres ? (
                 <>
                   <ul className="flex items-center ">
                     {movieDetails?.genres?.map((genre) => {
                       return (
                         <li className="mr-2 border rounded-full px-3 py-1 my-2 text-red-600">
-                          {genre.name}
+                          {genre?.name}
                         </li>
                       );
                     })}
@@ -79,9 +79,9 @@ export default function MovieDetails() {
                 ""
               )}
               <h4 className="text-xl my-2 font-medium">OverView : </h4>
-              <p className="text-gray-600 mb-6">{movieDetails.overview}</p>
+              <p className="text-gray-600 mb-6">{movieDetails?.overview}</p>
 
-              {movieDetails.production_companies ? (
+              {movieDetails?.production_companies ? (
                 <>
                   <h4 className="text-xl my-2 font-medium">
                     Production Companies :{" "}
@@ -103,14 +103,14 @@ export default function MovieDetails() {
               ) : (
                 ""
               )}
-              {movieDetails.spoken_languages ? (
+              {movieDetails?.spoken_languages ? (
                 <>
                   <h4 className="text-xl mt-6 font-medium">
                     Spoken Languages :{" "}
                   </h4>
                   <ul className="flex items-center my-3">
                     {movieDetails?.spoken_languages?.map((lan) => {
-                      return <li className="mr-2">{lan.name}</li>;
+                      return <li className="mr-2">{lan?.name}</li>;
                     })}
                   </ul>
                 </>
@@ -120,11 +120,11 @@ export default function MovieDetails() {
               <h4 className="text-xl my-2 font-medium">Release Date : </h4>
               <div className="flex justify-between items-center  w-full my-3">
                 <span className="text-xl  ">
-                  {new Date(movieDetails.release_date).toDateString()}
+                  {new Date(movieDetails?.release_date).toDateString()}
                 </span>
                 <button
                   onClick={() => {
-                    addToWatchFn(movieDetails.id);
+                    addToWatchFn(movieDetails?.id);
                   }}
                 >
                   {" "}
