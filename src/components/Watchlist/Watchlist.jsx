@@ -42,7 +42,7 @@ export default function WatchList() {
               >
                 <table className="w-full text-sm text-left rtl:text-right ">
                   <tbody>
-                    <tr className="bg-white border-b ">
+                    <tr className="bg-white border-b flex flex-col md:flex-row md:justify-around items-center ">
                       <td className="p-4">
                         <img
                           src={`https://image.tmdb.org/t/p/w500/${watch?.backdrop_path}`}

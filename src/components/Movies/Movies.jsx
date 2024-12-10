@@ -112,7 +112,7 @@ export default function Movies() {
                 <span className="text-xl  ">{releaseData.toDateString()}</span>
                 <button
                   onClick={() => {
-                    addToWatchFn(movie.id);
+                    addToWatchFn(movie?.id);
                   }}
                 >
                   {" "}
