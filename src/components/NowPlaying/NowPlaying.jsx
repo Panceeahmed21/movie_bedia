@@ -56,7 +56,7 @@ export default function NowPlaying() {
               className="w-full md:w-1/4 px-4 py-4 text-center"
               key={movie.id}
             >
-              <Link to={`/movie_bedia/moviesDetails/${movie.id}`}>
+              <Link to={`/moviesDetails/${movie.id}`}>
                 <img
                   className="rounded-lg hover:skew-x-6 hover:skew-y-6 transition-all duration-300 "
                   src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}

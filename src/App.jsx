@@ -21,7 +21,7 @@ function App() {
 
   let routing = createBrowserRouter([
     {
-      path: "/movie_bedia",
+      path: "",
       element: <Layout />,
       children: [
         { index: true, element: <Home /> },
