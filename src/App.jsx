@@ -16,11 +16,8 @@ import "slick-carousel/slick/slick-theme.css";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
-
 function App() {
-
-let query = new QueryClient()
-
+  let query = new QueryClient();
 
   let routing = createBrowserRouter([
     {
@@ -30,7 +27,6 @@ let query = new QueryClient()
         { index: true, element: <Home /> },
         { path: "moviesDetails/:id", element: <MovieDetails /> },
         { path: "movies", element: <Movies /> },
-
         { path: "watchList", element: <Watchlist /> },
         { path: "nowPlaying", element: <NowPlaying /> },
         { path: "*", element: <NotFound /> },
@@ -39,14 +35,13 @@ let query = new QueryClient()
   ]);
   return (
     <>
-    <QueryClientProvider client={query}>
-    <WhishlistContextProvider>
-        <RouterProvider router={routing}></RouterProvider>
-        <Toaster></Toaster>
-        <ReactQueryDevtools></ReactQueryDevtools>
-      </WhishlistContextProvider>
-    </QueryClientProvider>
-   
+      <QueryClientProvider client={query}>
+        <WhishlistContextProvider>
+          <RouterProvider router={routing}></RouterProvider>
+          <Toaster></Toaster>
+          <ReactQueryDevtools></ReactQueryDevtools>
+        </WhishlistContextProvider>
+      </QueryClientProvider>
     </>
   );
 }

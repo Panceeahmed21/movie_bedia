@@ -55,17 +55,24 @@ export default function MovieDetails() {
           <div className="flex flex-wrap">
             <div className="w-full md:w-1/2 px-2">
               <img
-                className="w-[80%]"
+                className="w-[80%] rounded-full hover:skew-x-3 hover:skew-y-3  transition-all duration-30"
                 src={`https://image.tmdb.org/t/p/w500/${movieDetails?.poster_path}`}
                 alt=""
               />
             </div>
             <div className="w-full md:w-1/2 px-2">
-              <h2 className="text-2xl font-medium">{movieDetails?.title}</h2>
-
+              <div className="flex justify-between items-center">
+                <h2 className="text-2xl font-medium my-5 md:my-0">
+                  {movieDetails?.title}
+                </h2>{" "}
+                <span className="text-2xl text-[#FFDF00]">
+                  {movieDetails.vote_average}
+                  <i className="fa-solid fa-star"></i>
+                </span>
+              </div>
               {movieDetails?.genres ? (
                 <>
-                  <ul className="flex items-center ">
+                  <ul className="flex items-center flex-wrap ">
                     {movieDetails?.genres?.map((genre) => {
                       return (
                         <li className="mr-2 border rounded-full px-3 py-1 my-2 text-red-600">
@@ -80,7 +87,6 @@ export default function MovieDetails() {
               )}
               <h4 className="text-xl my-2 font-medium">OverView : </h4>
               <p className="text-gray-600 mb-6">{movieDetails?.overview}</p>
-
               {movieDetails?.production_companies ? (
                 <>
                   <h4 className="text-xl my-2 font-medium">
@@ -131,6 +137,7 @@ export default function MovieDetails() {
                   <i className="fa-solid fa-heart bg-red-600 text-white text-2xl p-2 rounded-full"></i>
                 </button>
               </div>
+              {/* <h4 className="text-xl my-2 font-medium">Vote Average : </h4> */}
             </div>
           </div>
         </>

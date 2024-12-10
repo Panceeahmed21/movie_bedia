@@ -52,17 +52,7 @@ export default function Navbar_Comp() {
         >
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 ">
 
-          <li>
-              <NavLink
-                onClick={() => {
-                  setIsOpen(false);
-                }}
-                to="/movie_bedia/movies"
-                className="block  rounded-md p-2 transition-all duration-700     "
-              >
-                Movies
-              </NavLink>
-            </li>
+         
             <li>
               <NavLink
                 onClick={() => {
