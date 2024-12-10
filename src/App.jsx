@@ -24,7 +24,7 @@ let query = new QueryClient()
 
   let routing = createBrowserRouter([
     {
-      path: "",
+      path: "/movie_bedia",
       element: <Layout />,
       children: [
         { index: true, element: <Home /> },

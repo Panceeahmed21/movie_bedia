@@ -8,7 +8,7 @@ export default function Navbar_Comp() {
     <nav className="text-white border-gray-200 bg-logoColor fixed top-0 w-full z-[999999]">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link
-          to=""
+          to="/movie_bedia"
           onClick={() => {
             setIsOpen(false);
           }}
@@ -57,7 +57,7 @@ export default function Navbar_Comp() {
                 onClick={() => {
                   setIsOpen(false);
                 }}
-                to="movies"
+                to="/movie_bedia/movies"
                 className="block  rounded-md p-2 transition-all duration-700     "
               >
                 Movies
@@ -68,7 +68,7 @@ export default function Navbar_Comp() {
                 onClick={() => {
                   setIsOpen(false);
                 }}
-                to="watchList"
+                to="/movie_bedia/watchList"
                 className="block  rounded-md p-2 transition-all duration-700     "
               >
                 WatchList
@@ -79,7 +79,7 @@ export default function Navbar_Comp() {
                 onClick={() => {
                   setIsOpen(false);
                 }}
-                to="nowPlaying"
+                to="/movie_bedia/nowPlaying"
                 className="block  rounded-md p-2 transition-all duration-700     "
               >
                 Now Playing

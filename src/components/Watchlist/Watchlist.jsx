@@ -32,8 +32,8 @@ export default function WatchList() {
 
   return (
     <>
-      {watchList.length !== 0 ? (
-        watchList.length > 0 ? (
+      {watchList?.length !== 0 ? (
+        watchList?.length > 0 ? (
           watchList?.map((watch) => {
             return (
               <div
